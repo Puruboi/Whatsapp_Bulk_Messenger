@@ -1,0 +1,12 @@
+show databases;
+create database whatsapp_bulk_messenger;
+use whatsapp_bulk_messenger;
+create table Friends(fid int , Fname varchar(20) not null , Phone_number 
+varchar(10) not null unique, primary key(fid));
+desc Friends;
+insert into Friends values(1, 'Praveen','**********');
+insert into Friends values(2, 'Puruboi','**********');
+insert into Friends values(3, 'Sinchana','**********');
+insert into Friends values(4, 'Prathiba','**********');
+insert into Friends values(5, 'Pachhuuu','**********');
+commit;
