@@ -11,6 +11,7 @@ import pandas as pd
 import webbrowser as web 
 import time
 import pyautogui as pg
+import os
 #pd.__version__
 
 
@@ -29,7 +30,8 @@ def fetch_data(path):
 #message what is required to be pullled from table , here i hv taken names as values
 
 
-def sendmsg(path,message='hello'): 
+def sendmsg():
+    path,message=getter()
     bp_num,bp_value_1=fetch_data(path)
     for i in range(len(bp_num)):
         web.open('https://web.whatsapp.com/send?phone='+'91'+str(bp_num[i])+'&text='+ message+" {} ".format(str(bp_value_1[i])))
@@ -39,8 +41,12 @@ def sendmsg(path,message='hello'):
         pg.press('enter')
         time.sleep(3)
 
+def getter():
+    message=input("Enter the msg to send: ")
+    a=input("enter the file path: ")
+    path=os.path.normpath(a)
+    return path,message    
 
 
-path=r"C:\Users\SKYTECH 2020\Desktop\Book1.xlsx"
-#message=input('Enter the message: ')
-sendmsg(path)
+sendmsg()
+
