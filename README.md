@@ -17,7 +17,7 @@ Version 1.0
  
  3.greet_function: to greet  
  
- 4. sendmsg_function : to open web and send msg 
+4. sendmsg_function : to open web and send msg 
  
  5.main function used to call the respective functions accordingly 
  
