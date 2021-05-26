@@ -1,6 +1,5 @@
 # Project-5-Whatsapp_Messenger
 
-# Honey_the_AI_Assistant
 Version 1.0
 
 #Pre-Requiste Libs: 
